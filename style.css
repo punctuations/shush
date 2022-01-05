@@ -1,3 +1,18 @@
 /* empty in here for now :) */
 
 /* this is for overriding purposes with css (for hiding the videos a class is applied to the video) */
+
+.shush-blocked-img {
+    filter: blur(256px) !important;
+    -webkit-filter: blur(256px) !important;
+}
+
+.shush-blocked-sm-thumb {
+    filter: blur(128px) !important;
+    -webkit-filter: blur(128px) !important;
+}
+
+.shush-blocked-text {
+    color: transparent !important;
+    text-shadow: 0 0 10px white !important;
+}
