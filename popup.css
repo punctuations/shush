@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&display=swap');
 
 html {
-    height: auto;
+    margin-top: 50px;
+    height: 500px;
     width: 275px;
     font-family: Inter, sans-serif;
 }
