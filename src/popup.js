@@ -16,8 +16,8 @@ port.onMessage.addListener((message) => {
 })
 
 async function updateKeyword() {
-    console.log(`keyword updating with value of ${document.getElementsByTagName("input")[0].value}`)
-    port.postMessage({type: "post", payload: document.getElementsByTagName("input")[0].value})
+    console.log(`keyword updating with value of ${document.getElementsByTagName("input")[0].value.toLowerCase()}`)
+    port.postMessage({type: "post", payload: document.getElementsByTagName("input")[0].value.toLowerCase()})
 }
 
 function fetch() {
