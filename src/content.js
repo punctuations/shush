@@ -1,4 +1,4 @@
-const KEYWORD = chorme.sync.storage.get(["keyword"])
+const KEYWORD = chrome.sync.storage.get(["keyword"])
 
 if (KEYWORD !== "" || KEYWORD) {
     if (document.location.host === "www.youtube.com") {
