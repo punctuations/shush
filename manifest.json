@@ -1,22 +1,24 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
 
   "name": "shush",
   "version": "1.0",
   "description": "An easy way to block pesky videos based upon keywords.",
-  "permissions": [
-    "storage"
-  ],
+  "permissions": ["storage", "tabs"],
 
-  "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html"
+  "background": {
+    "service_worker": "src/background.js"
+  },
+
+  "action": {
+    "default_popup": "public/popup.html",
+    "default_icon": "public/icon.png"
   },
 
   "content_scripts": [
     {
       "css": [
-        "src/style.css"
+        "src/style/style.css"
       ],
       "js": [
         "src/content.js"

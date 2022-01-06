@@ -4,20 +4,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./popup.css">
+    <link rel="stylesheet" href="../src/style/popup.css">
 </head>
 <body class="center">
     <header class="center">
-        <img src="./icon.png" width="50px" height="50px">
+        <img src="icon.png" width="50px" height="50px">
         <h3 class="font-3xl">shush</h3>
         <p class="text-gray text-sm">Begin by adding keywords to block!</p>
     </header>
-    <form onsubmit="updateKeyword();" class="flex-row">
+    <form class="flex-row">
         <input name="submit" type="text">
         <p>&rarr;</p>
     </form>
     <ul id="keywords" class="text-gray">
     </ul>
-<script src="popup.js"></script>
+<script src="../src/popup.js"></script>
 </body>
 </html>
