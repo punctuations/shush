@@ -24,7 +24,7 @@
         chrome.storage.sync.set({keyword: document.getElementsByTagName("input")[0].value})
     }
 
-    chrome.sync.storage.get(['keyword'])
-    document.getElementById("keywords").innerHTML += `<li>${}</li>`
+    const kw = chrome.sync.storage.get(['keyword'])
+    document.getElementById("keywords").innerHTML += `<li>${kw}</li>`
 </script>
 </html>
