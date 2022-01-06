@@ -22,6 +22,7 @@ if (KEYWORD !== "" || KEYWORD) {
         console.log("host is youtube")
         const videos = document.getElementsByClassName('ytd-rich-item-renderer') // home
         const recommended = document.getElementsByClassName("ytd-compact-video-renderer") // recommended
+        const search = document.querySelectorAll("#contents > ytd-video-renderer") // search
 
         if (videos.length > 0) {
             console.log("on home page")
@@ -39,9 +40,7 @@ if (KEYWORD !== "" || KEYWORD) {
                     }
                 }
             }, 1000)
-        }
-
-        if (recommended.length > 0) {
+        } else if (recommended.length > 0) {
             console.log("on video page")
             rInverval = setInterval(() => {
                 for (let i = 0; i < recommended.length; i++) {
@@ -50,6 +49,18 @@ if (KEYWORD !== "" || KEYWORD) {
                         recommended[i].querySelector("#img").classList.add("shush-blocked-sm-thumb")
                         recommended[i].querySelector("#video-title").classList.add("shush-blocked-text")
                         recommended[i].querySelector("#video-title").title = "blocked"
+                    }
+                }
+            }, 1000)
+        } else if (search.length > 0) {
+            console.log("on search page")
+            sInterval = setInterval(() => {
+                for (let i = 0; i < search.length; i++) {
+                    if (search[i].querySelector("#video-title").ariaLabel.toLowerCase().includes(KEYWORD)) {
+                        console.log("blocking...")
+                        search[i].querySelector("#img").classList.add("shush-blocked-sm-thumb")
+                        search[i].querySelector("#video-title").classList.add("shush-blocked-text")
+                        search[i].querySelector("#video-title").title = "blocked"
                     }
                 }
             }, 1000)
