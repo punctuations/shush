@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&display=swap');
+
+html {
+    height: auto;
+    width: 275px;
+    font-family: Inter, sans-serif;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.font-5xl {
+    font-size: 3rem;
+    line-height: 1rem;
+}
+
+.font-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+.text-gray {
+    color: rgb(156 163 175);
+}
+
+.text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-row > p {
+    transition: 500ms;
+    margin-block-end: 0;
+}
+
+.flex-row > p:hover {
+    margin-left: 0.25rem;
+}
+
+h1 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+h3 {
+    margin-block-end: 0;
+}
+
+p {
+    margin-block-start: 0;
+}
+
+input {
+    -webkit-appearance: none;
+    border: none;
+    border-bottom: 0.15rem solid rgb(75 85 99);;
+}

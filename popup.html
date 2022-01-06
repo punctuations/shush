@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Shush</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./popup.css">
+</head>
+<body class="center">
+    <header class="center">
+        <h1 class="font-5xl">🤐</h1>
+        <h3 class="font-3xl">shush</h3>
+        <p class="text-gray text-sm">Begin by adding keywords to block!</p>
+    </header>
+    <form onsubmit="updateKeyword();" class="flex-row">
+        <input name="submit" type="text">
+        <p>&rarr;</p>
+    </form>
+    <ul id="keywords" class="text-gray">
+    </ul>
+</body>
+<script>
+    function updateKeyword() {
+        chrome.storage.sync.set({keyword: document.getElementsByTagName("input")[0].value})
+    }
+
+    chrome.sync.storage.get(['keyword'])
+    document.getElementById("keywords").innerHTML += `<li>${}</li>`
+</script>
+</html>
