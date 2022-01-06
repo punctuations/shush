@@ -14,3 +14,8 @@
     color: transparent !important;
     text-shadow: 0 0 10px white !important;
 }
+
+.light-shush-blocked-text {
+    color: transparent !important;
+    text-shadow: 0 0 5px black !important;
+}
