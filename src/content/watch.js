@@ -8,6 +8,7 @@ port.onMessage.addListener((message) => {
         if (message.data) {
             console.log(message.data)
             KEYWORD = message.data;
+            block()
         }
     }
 })
@@ -20,7 +21,7 @@ getKeyword()
 
 let recommended;
 
-if (KEYWORD !== "" && KEYWORD) {
+function block() {
     recommended = document.querySelectorAll("#items > ytd-compact-video-renderer") // recommended
     comments = document.getElementsByTagName("ytd-comment-renderer") // comments
 

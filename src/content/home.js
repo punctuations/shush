@@ -8,6 +8,7 @@ port.onMessage.addListener((message) => {
         if (message.data) {
             console.log(message.data)
             KEYWORD = message.data;
+            block()
         }
     }
 })
@@ -20,9 +21,9 @@ getKeyword()
 
 let videos;
 
-if (KEYWORD !== "" && KEYWORD) {
+function block() {
     console.log("keyword is valid")
-    videos = document.getElementsByTagName('ytd-rich-item-renderer') // home
+    videos = document.getElementsByClassName('ytd-rich-item-renderer') // home
 
     if (document.location.pathname === "/") {
         console.log("on home page")

@@ -8,6 +8,7 @@ port.onMessage.addListener((message) => {
         if (message.data) {
             console.log(message.data)
             KEYWORD = message.data;
+            block()
         }
     }
 })
@@ -20,7 +21,7 @@ getKeyword()
 
 let search;
 
-if (KEYWORD !== "" && KEYWORD) {
+function block() {
     console.log("keyword is valid")
     search = document.getElementsByTagName("ytd-video-renderer") // search
 
