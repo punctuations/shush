@@ -19,6 +19,7 @@ function getKeyword() {
 getKeyword()
 
 let recommended;
+let comments;
 
 function block() {
     recommended = document.querySelectorAll("#items > ytd-compact-video-renderer") // recommended
