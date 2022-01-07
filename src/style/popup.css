@@ -71,12 +71,14 @@ input {
 li {
     list-style: none;
     margin-top: 1.875rem;
-    margin-left: -5.5rem;
+    margin-left: -1.5rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    position: relative;
 }
 
 li > span {
     cursor: pointer;
+    position: absolute;
+    right: 15;
 }
