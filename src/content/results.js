@@ -17,7 +17,6 @@ function getKeyword() {
 getKeyword()
 
 let search;
-let related;
 
 if (KEYWORD !== "" || KEYWORD) {
     console.log("keyword is valid")
