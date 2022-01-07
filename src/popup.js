@@ -5,10 +5,9 @@ document.getElementsByTagName("form")[0].addEventListener('submit', (e) => {
     updateKeyword();
 })
 
-// document.addEventListener("onclick", (e) => {
-//     e.
-//     deleteKeyword(parseInt(element.getAttribute("index")))
-// })
+document.querySelector("form > p").addEventListener("click", () => {
+    updateKeyword()
+})
 
 port.onMessage.addListener((message) => {
     if (typeof message === "object") {
