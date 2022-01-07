@@ -21,10 +21,30 @@
         "src/style/style.css"
       ],
       "js": [
-        "src/content.js"
+        "src/content/home.js"
       ],
       "matches": [
-        "https://www.youtube.com/*"
+        "https://www.youtube.com/"
+      ]
+    }, {
+      "css": [
+        "src/style/style.css"
+      ],
+      "js": [
+        "src/content/watch.js"
+      ],
+      "matches": [
+        "https://www.youtube.com/watch?*"
+      ]
+    }, {
+      "css": [
+        "src/style/style.css"
+      ],
+      "js": [
+        "src/content/results.js"
+      ],
+      "matches": [
+        "https://www.youtube.com/results?*"
       ]
     }]
 
