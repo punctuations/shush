@@ -67,3 +67,16 @@ input {
     border: none;
     border-bottom: 0.15rem solid rgb(75 85 99);;
 }
+
+li {
+    list-style: none;
+    margin-top: 1.875rem;
+    margin-left: -5.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+li > span {
+    cursor: pointer;
+}
