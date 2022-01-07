@@ -2,7 +2,7 @@
   "manifest_version": 3,
 
   "name": "shush",
-  "version": "1.1",
+  "version": "1.2",
   "description": "An easy way to block pesky videos based upon keywords.",
   "permissions": ["storage", "tabs"],
 
