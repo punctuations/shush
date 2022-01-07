@@ -6,7 +6,6 @@ let url = document.location.href;
 port.onMessage.addListener((message) => {
     if (typeof message === "object") {
         if (message.data) {
-            console.log(message.data)
             KEYWORD = message.data;
             block()
         }
@@ -26,12 +25,10 @@ function block() {
     comments = document.getElementsByTagName("ytd-comment-renderer") // comments
 
     if (document.location.pathname === "/watch") {
-        console.log("on video page")
         setInterval(() => {
             for (let i = 0; i < recommended.length || i < comments.length; i++) {
                 KEYWORD.forEach(element => {
                     if (i < recommended.length && recommended[i].querySelector("#video-title").ariaLabel.toLowerCase().includes(element)) {
-                        console.log("blocking...")
                         recommended[i].querySelector("#img").classList.add("shush-blocked-sm-thumb")
                         if (document.querySelectorAll("[dark=true]")[0]) {
                             recommended[i].querySelector("#video-title").classList.add("shush-blocked-text")

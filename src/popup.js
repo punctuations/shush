@@ -17,7 +17,6 @@ port.onMessage.addListener((message) => {
             }).join(" ")
             document.querySelectorAll("span").forEach((element) => {
                 element.addEventListener("click", () => {
-                    console.log("minus clicked")
                     deleteKeyword(parseInt(element.getAttribute("index")))
                 })
             })
@@ -30,12 +29,10 @@ port.onMessage.addListener((message) => {
 })
 
 function deleteKeyword(index) {
-    console.log(`keyword deleting with at index ${index}`)
     port.postMessage({type: "delete", payload: index})
 }
 
 function updateKeyword() {
-    console.log(`keyword updating with value of ${document.getElementsByTagName("input")[0].value.toLowerCase()}`)
     port.postMessage({type: "post", payload: document.getElementsByTagName("input")[0].value.toLowerCase()})
 }
 
