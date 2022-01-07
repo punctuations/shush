@@ -20,7 +20,7 @@ getKeyword()
 
 let videos;
 
-if (KEYWORD !== "" || KEYWORD) {
+if (KEYWORD !== "" && KEYWORD) {
     console.log("keyword is valid")
     videos = document.getElementsByTagName('ytd-rich-item-renderer') // home
 

@@ -20,7 +20,7 @@ getKeyword()
 
 let recommended;
 
-if (KEYWORD !== "" || KEYWORD) {
+if (KEYWORD !== "" && KEYWORD) {
     recommended = document.querySelectorAll("#items > ytd-compact-video-renderer") // recommended
     comments = document.getElementsByTagName("ytd-comment-renderer") // comments
 

@@ -20,7 +20,7 @@ getKeyword()
 
 let search;
 
-if (KEYWORD !== "" || KEYWORD) {
+if (KEYWORD !== "" && KEYWORD) {
     console.log("keyword is valid")
     search = document.getElementsByTagName("ytd-video-renderer") // search
 
