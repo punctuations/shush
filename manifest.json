@@ -2,7 +2,7 @@
   "manifest_version": 3,
 
   "name": "shush",
-  "version": "1.3",
+  "version": "1.4",
   "description": "An easy way to block pesky videos based upon keywords.",
   "permissions": ["storage"],
 
@@ -45,6 +45,16 @@
       ],
       "matches": [
         "https://www.youtube.com/results?*"
+      ]
+    }, {
+      "css": [
+        "src/style/style.css"
+      ],
+      "js": [
+        "src/content/channel.js"
+      ],
+      "matches": [
+        "https://www.youtube.com/channel/*", "https://www.youtube.com/c/*"
       ]
     }]
 
