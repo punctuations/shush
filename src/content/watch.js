@@ -51,9 +51,11 @@ function block() {
     }
 }
 
-setInterval(() => {
-    if (url !== document.location.pathname) {
-        url = document.location.pathname
+setTimeout(() => {
+    setInterval(() => {
+        if (url !== document.location.pathname) {
+            url = document.location.pathname
             location.reload()
-    }
-}, 500)
+        }
+    }, 500)
+}, 1000)
