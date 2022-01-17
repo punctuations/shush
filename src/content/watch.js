@@ -1,7 +1,7 @@
 const port = chrome.runtime.connect({name: "inquire"})
 let KEYWORD;
 
-let url = document.location.href;
+let url = document.location.pathname;
 
 port.onMessage.addListener((message) => {
     if (typeof message === "object") {
@@ -52,8 +52,8 @@ function block() {
 }
 
 setInterval(() => {
-    if (url !== document.location.href) {
-        url = document.location.href
-        location.reload()
+    if (url !== document.location.pathname) {
+        url = document.location.pathname
+            location.reload()
     }
 }, 500)
