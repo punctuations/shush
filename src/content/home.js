@@ -27,7 +27,7 @@ function block() {
         setInterval(() => {
             for (let i = 0; i < videos.length; i++) {
                 KEYWORD.forEach(element => {
-                    if (videos[i].querySelector("#video-title").ariaLabel.toLowerCase().includes(element)) {
+                    if (videos[i].querySelector("#video-title")?.ariaLabel.toLowerCase().includes(element)) {
                         videos[i].querySelector("#img").classList.add("shush-blocked-img")
                         if (document.querySelectorAll("[dark=true]")[0]) {
                             videos[i].querySelector("#video-title").classList.add("shush-blocked-text")
