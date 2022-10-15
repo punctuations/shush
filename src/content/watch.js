@@ -31,7 +31,7 @@ function block() {
                 KEYWORD.forEach(element => {
                     if (i < recommended.length && recommended[i].querySelector("#video-title").ariaLabel.toLowerCase().includes(element)) {
                         recommended[i].querySelector("#img").classList.add("shush-blocked-sm-thumb")
-                        if (document.querySelectorAll("[dark=true]")[0]) {
+                        if (document.querySelectorAll("[dark]")[0]) {
                             recommended[i].querySelector("#video-title").classList.add("shush-blocked-text")
                         } else {
                             recommended[i].querySelector("#video-title").classList.add("light-shush-blocked-text")
@@ -39,7 +39,7 @@ function block() {
                         recommended[i].querySelector("#video-title").title = "blocked"
                     }
                     if (i < comments.length && comments[i].querySelector("#content-text").innerHTML.toLowerCase().includes(element)) {
-                        if (document.querySelectorAll("[dark=true]")[0]) {
+                        if (document.querySelectorAll("[dark]")[0]) {
                             comments[i].querySelector("#content-text").classList.add("shush-blocked-text")
                         } else {
                             comments[i].querySelector("#content-text").classList.add("light-shush-blocked-text")

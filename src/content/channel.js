@@ -29,7 +29,7 @@ function block() {
                 KEYWORD.forEach(element => {
                     if (videos[i].querySelector("#video-title").ariaLabel.toLowerCase().includes(element)) {
                         videos[i].querySelector("#img").classList.add("shush-blocked-img")
-                        if (document.querySelectorAll("[dark=true]")[0]) {
+                        if (document.querySelectorAll("[dark]")[0]) {
                             videos[i].querySelector("#video-title").classList.add("shush-blocked-text")
                         } else {
                             videos[i].querySelector("#video-title").classList.add("light-shush-blocked-text")
