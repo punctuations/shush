@@ -7,6 +7,60 @@ html {
     font-family: Inter, sans-serif;
 }
 
+.lines {
+    background-image: url(https://cal.com/grid-sprite.svg);
+    background-position: top;
+    background-size: 2449px;
+    background-repeat: repeat;
+}
+
+.container {
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 0.75rem;
+    color: rgb(156 163 175);
+}
+
+.btn {
+    transition-property: color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    --webkit-appearance: none;
+    appearance: none;
+    border: none;
+    color: rgb(140, 143, 148);
+    padding: .25rem;
+    font-size: .75rem;
+    line-height: 1.25rem;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.btn:hover {
+    color: rgb(0 0 0);
+}
+
+.w-5 {
+    width: 1.25rem;
+}
+
+.h-5 {
+    height: 1.25rem;
+}
+
 .center {
     display: flex;
     flex-direction: column;
@@ -63,22 +117,77 @@ p {
 }
 
 input {
+    transition-property: border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    outline: 0;
     -webkit-appearance: none;
-    border: none;
-    border-bottom: 0.15rem solid rgb(75 85 99);;
+    appearance: none;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    display: block;
+    width: 100%;
+    border-radius: 0.275rem;
+    border: 0.1rem solid rgba(170, 171, 174, 0.5);
+    padding: .25rem 3rem .25rem 2.5rem;
+}
+
+input:focus {
+    border: 0.1rem solid rgb(0 0 0);
+}
+
+ul {
+    margin-block: 0;
+    padding-inline: 0;
+}
+
+h5 {
+    margin-block: 0;
+    font-size: .95rem;
+    color: rgb(0 0 0 / 0.5)
+}
+
+p {
+    margin-block: 0;
+}
+
+li > header {
+    margin-left: .5rem;
+}
+
+li > header > p {
+    font-size: .75rem;
 }
 
 li {
+    background-color: rgb(255 255 255);
+    padding-top: 0.275rem;
+    padding-bottom: 0.275rem;
     list-style: none;
-    margin-top: 1.875rem;
-    margin-left: -1.5rem;
+    width: 100%;
+    margin-top: .275rem;
     display: flex;
     flex-direction: row;
+    align-items: center;
     position: relative;
+    border-radius: 0.275rem;
+    border: 0.1rem solid rgba(206, 204, 204, 0.5);
 }
 
 li > span {
+    transition-property: border-color, color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    background-color: rgb(255 255 255);
+    border: 1px solid rgba(208, 208, 211, 0.5);
+    border-radius: 0.25rem;
+    padding: .1rem .25rem;
     cursor: pointer;
     position: absolute;
-    right: 15;
+    right: 15px;
+}
+
+li > span:hover {
+    color: rgb(0 0 0);
+    border: 1px solid rgba(0 0 0);
 }
