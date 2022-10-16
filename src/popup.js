@@ -38,13 +38,14 @@ function deleteKeyword(index) {
 }
 
 function updateKeyword() {
-  port.postMessage({
-    type: "post",
-    payload: [
-      document.getElementsByTagName("input")[0].value.toLowerCase(),
-      new Date(),
-    ],
-  });
+  let input = document.getElementsByTagName("input")[0].value.toLowerCase();
+
+  if (input !== "" && input !== " ") {
+    port.postMessage({
+      type: "post",
+      payload: [input, new Date()],
+    });
+  }
 }
 
 function fetch() {
