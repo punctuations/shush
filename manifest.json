@@ -1,61 +1,43 @@
 {
-  "manifest_version": 3,
+	"manifest_version": 3,
 
-  "name": "shush",
-  "version": "1.8",
-  "description": "An easy way to block pesky videos based upon keywords.",
-  "permissions": ["storage"],
+	"name": "shush",
+	"version": "1.8.1",
+	"description": "An easy way to block pesky videos based upon keywords.",
+	"permissions": ["storage"],
 
-  "background": {
-    "service_worker": "src/background.js"
-  },
+	"background": {
+		"service_worker": "src/background.js"
+	},
 
-  "action": {
-    "default_popup": "public/popup.html",
-    "default_icon": "public/icon.png"
-  },
+	"action": {
+		"default_popup": "public/popup.html",
+		"default_icon": "public/icon.png"
+	},
 
-  "content_scripts": [
-    {
-      "css": [
-        "src/style/style.css"
-      ],
-      "js": [
-        "src/content/home.js"
-      ],
-      "matches": [
-        "https://www.youtube.com/"
-      ]
-    }, {
-      "css": [
-        "src/style/style.css"
-      ],
-      "js": [
-        "src/content/watch.js"
-      ],
-      "matches": [
-        "https://www.youtube.com/watch?*"
-      ]
-    }, {
-      "css": [
-        "src/style/style.css"
-      ],
-      "js": [
-        "src/content/results.js"
-      ],
-      "matches": [
-        "https://www.youtube.com/results?*"
-      ]
-    }, {
-      "css": [
-        "src/style/style.css"
-      ],
-      "js": [
-        "src/content/channel.js"
-      ],
-      "matches": [
-        "https://www.youtube.com/channel/*", "https://www.youtube.com/c/*"
-      ]
-    }]
-
+	"content_scripts": [
+		{
+			"css": ["src/style/style.css"],
+			"js": ["src/content/home.js"],
+			"matches": ["https://www.youtube.com/"]
+		},
+		{
+			"css": ["src/style/style.css"],
+			"js": ["src/content/watch.js"],
+			"matches": ["https://www.youtube.com/watch?*"]
+		},
+		{
+			"css": ["src/style/style.css"],
+			"js": ["src/content/results.js"],
+			"matches": ["https://www.youtube.com/results?*"]
+		},
+		{
+			"css": ["src/style/style.css"],
+			"js": ["src/content/channel.js"],
+			"matches": [
+				"https://www.youtube.com/channel/*",
+				"https://www.youtube.com/c/*"
+			]
+		}
+	]
 }

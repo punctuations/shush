@@ -191,3 +191,7 @@ li > span:hover {
     color: rgb(0 0 0);
     border: 1px solid rgba(0 0 0);
 }
+
+#keywords {
+    overflow-y: scroll;
+}
